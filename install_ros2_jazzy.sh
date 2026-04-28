@@ -27,13 +27,5 @@ sudo apt upgrade -y
 sudo apt install -y ros-jazzy-desktop
 sudo apt install -y ros-jazzy-ros-base
 
-# 自动 source ROS 环境
-if ! grep -q "source /opt/ros/jazzy/setup.bash" ~/.bash_aliases; then
-  echo "alias jh='source /opt/ros/jazzy/setup.bash'" >> ~/.bash_aliases
-fi
-if ! grep -q "source ~/.bash_aliases" ~/.bashrc; then
-  echo "source ~/.bash_aliases" >> ~/.bashrc
-fi
-
 echo "==> ROS 2 Jazzy 安装完成 ✅"
-echo "请执行： source ~/.bashrc && jh && rviz2 测试安装结果"
+echo "请执行： source /opt/ros/jazzy/setup.bash && rviz2 测试安装结果"
